@@ -1,7 +1,4 @@
 footer {
-	display: flex;
-	border-top: 1px solid var(--secondary);
-	justify-content: space-evenly;
 	position: relative;
 	
 	.footersection {
@@ -11,6 +8,9 @@ footer {
 		h1 {
 			font-family: Alegreya;
 			text-align: center;
+			font-size: 24px;
+			font-weight: bold;
+			padding-block: 8px;
 		}
 		
 		#footernav {

@@ -8,8 +8,44 @@ document.querySelectorAll<HTMLElement>('.lorem').forEach((element) => {
 });
 
 document.querySelectorAll<HTMLAnchorElement>('a').forEach((element) => {
-	element.addEventListener('click', () => {
+	element.addEventListener('click', (ev) => {
+		ev.preventDefault();
+
 		const page = element.href.split('#')[1];
-		console.log(page);
+
+		// Hide all anchor tags that were previously selected
+		const non_selected_links = document.querySelectorAll<HTMLAnchorElement>('.link.selected');
+
+		non_selected_links.forEach((link) => {
+			link.classList.remove('selected');
+		});
+
+		// Apply a selected class to all anchor tags that are now selected
+		const selected_links = document.querySelectorAll<HTMLAnchorElement>(`.link${page}`);
+
+		selected_links.forEach((link) => {
+			link.classList.add('selected');
+		});
+
+		// Hide all pages that were previously selected
+		const non_selected_pages = document.querySelectorAll<HTMLElement>('.page.selected');
+
+		non_selected_pages.forEach((page_element) => {
+			page_element.classList.remove('selected');
+		});
+
+		// Apply a selected class to all anchor tags that are now selected
+		const selected_pages = document.querySelectorAll<HTMLElement>(`#${page}`);
+
+		selected_pages.forEach((page_element) => {
+			page_element.classList.add('selected');
+		});
+
+		scrollToTop();
 	});
 });
+
+
+function scrollToTop(): void {
+	window.scrollTo({ top: 0 });
+}

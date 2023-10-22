@@ -5,17 +5,17 @@
 	<title>Laiba Tariq - Portfolio</title>
 	<%= htmlWebpackPlugin.tags.headTags %>
 </head>
-<body>
-	<nav>
-		<a href="#homepage" class="selected">Homepage</a>
+<body class="bg-paper text-ink">
+	<nav class="border-b-2 border-coffee text-center pt-4 pb-4 select-none">
+		<a href="#homepage" class="link linkhomepage selected">Homepage</a>
 		|
-		<a href="#about">About</a>
+		<a href="#about" class="link linkabout">About</a>
 		|
-		<a href="#portfolio">Portfolio</a>
+		<a href="#portfolio" class="link linkportfolio">Portfolio</a>
 		|
-		<a href="#resume">Resume</a>
+		<a href="#resume" class="link linkresume">Resume</a>
 		|
-		<a href="#contact">Contact</a>
+		<a href="#contact" class="link linkcontact">Contact</a>
 	</nav>
 
 	<div id="pages">
@@ -23,11 +23,28 @@
 			<h1>Laiba Tariq</h1>
 			<p class="lorem"></p>
 		</div>
+
+		<div class="page" id="about">
+			<h1>About Me</h1>
+		</div>
+
+		<div class="page" id="portfolio">
+			<h1>My Portfolio</h1>
+		</div>
+
+		<div class="page" id="resume">
+			<h1>My Resume</h1>
+		</div>
+
+		<div class="page" id="contact">
+			<h1>Reach out to me</h1>
+		</div>
 	</div>
 
-	<footer>
+	<footer class="border-t-2 border-coffee flex justify-evenly relative">
 		<div class="footersection">
 			<h1>About me</h1>
+
 			<p class="lorem"></p>
 		</div>
 
@@ -35,18 +52,18 @@
 			<h1>Check out</h1>
 
 			<div id="footernav">
-				<a href="#homepage" class="selected">Homepage</a>
-				<a href="#about">About</a>
-				<a href="#portfolio">Portfolio</a>
-				<a href="#resume">Resume</a>
-				<a href="#contact">Contact</a>
+				<a href="#homepage" class="link linkhomepage selected">Homepage</a>
+				<a href="#about" class="link linkabout">About</a>
+				<a href="#portfolio" class="link linkportfolio">Portfolio</a>
+				<a href="#resume" class="link linkresume">Resume</a>
+				<a href="#contact" class="link linkcontact">Contact</a>
 			</div>
 		</div>
 
 		<div class="footersection">
 			<h1>Reach out</h1>
 
-			<div id="footerlinks">
+			<div id="footerlinks" class="flex justify-center gap-2">
 				<a href="https://www.upwork.com/freelancers/lyba">
 					<img src="<%= require('./assets/imgs/upworkm.svg') %>">
 				</a>

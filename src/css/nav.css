@@ -1,19 +1,12 @@
 nav {
-	text-align: center;
-	color: var(--secondary-text);
-	user-select: none;
-	border-bottom: 1px solid var(--secondary);
-	padding-block: 8px;
-
 	a {
 		font-size: 20px;
-		color: var(--primary-text);
-		cursor: pointer;
 		text-decoration: none;
+		padding-inline: 12px;
 
 		&.selected {
-			color: var(--secondary-text);
 			font-weight: bold;
+			color: theme('colors.coffee');
 		}
 	}
 }
