@@ -13,38 +13,48 @@ document.querySelectorAll<HTMLAnchorElement>('a').forEach((element) => {
 
 		const page = element.href.split('#')[1];
 
-		// Hide all anchor tags that were previously selected
-		const non_selected_links = document.querySelectorAll<HTMLAnchorElement>('.link.selected');
-
-		non_selected_links.forEach((link) => {
-			link.classList.remove('selected');
-		});
-
-		// Apply a selected class to all anchor tags that are now selected
-		const selected_links = document.querySelectorAll<HTMLAnchorElement>(`.link${page}`);
-
-		selected_links.forEach((link) => {
-			link.classList.add('selected');
-		});
-
-		// Hide all pages that were previously selected
-		const non_selected_pages = document.querySelectorAll<HTMLElement>('.page.selected');
-
-		non_selected_pages.forEach((page_element) => {
-			page_element.classList.remove('selected');
-		});
-
-		// Apply a selected class to all anchor tags that are now selected
-		const selected_pages = document.querySelectorAll<HTMLElement>(`#${page}`);
-
-		selected_pages.forEach((page_element) => {
-			page_element.classList.add('selected');
-		});
-
-		scrollToTop();
+		setPage(page);
 	});
 });
 
+const hash = window.location.hash;
+if (hash) {
+	setPage(hash.replace('#',''));
+}
+
+function setPage(page: string): void {
+	window.location.hash = page;
+
+	// Hide all anchor tags that were previously selected
+	const non_selected_links = document.querySelectorAll<HTMLAnchorElement>('.link.selected');
+
+	non_selected_links.forEach((link) => {
+		link.classList.remove('selected');
+	});
+
+	// Apply a selected class to all anchor tags that are now selected
+	const selected_links = document.querySelectorAll<HTMLAnchorElement>(`.link${page}`);
+
+	selected_links.forEach((link) => {
+		link.classList.add('selected');
+	});
+
+	// Hide all pages that were previously selected
+	const non_selected_pages = document.querySelectorAll<HTMLElement>('.page.selected');
+
+	non_selected_pages.forEach((page_element) => {
+		page_element.classList.remove('selected');
+	});
+
+	// Apply a selected class to all anchor tags that are now selected
+	const selected_pages = document.querySelectorAll<HTMLElement>(`#${page}`);
+
+	selected_pages.forEach((page_element) => {
+		page_element.classList.add('selected');
+	});
+
+	scrollToTop();
+}
 
 function scrollToTop(): void {
 	window.scrollTo({ top: 0 });

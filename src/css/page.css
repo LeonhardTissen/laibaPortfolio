@@ -2,7 +2,7 @@
 	.page {
 		display: none;
 		margin-inline: max(10px, calc(30vw - 150px));
-		min-height: calc(100vh - 300px);
+		min-height: calc(100vh - 320px);
 
 		&.selected {
 			display: block;
