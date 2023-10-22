@@ -91,6 +91,9 @@
 
 					h2 {
 						padding: 0px;
+						white-space: nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
 					}
 
 					.img-container {
@@ -104,6 +107,11 @@
 							border-radius: 8px;
 							pointer-events: none;
 						}
+					}
+
+					p {
+						margin-top: 6px;
+						font-style: italic;
 					}
 				}
 			}

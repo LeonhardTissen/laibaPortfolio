@@ -5,6 +5,12 @@ document.querySelectorAll<HTMLButtonElement>('#filters .filter').forEach((tag) =
 			filterBy(category);
 		}
 
+		if (tag.classList.contains('selected')) {
+			removeFilter();
+			tag.classList.remove('selected');
+			return;
+		}
+
 		document.querySelectorAll<HTMLButtonElement>('#filters .filter.selected').forEach((selected_tag) => {
 			selected_tag.classList.remove('selected');
 		});
@@ -13,6 +19,33 @@ document.querySelectorAll<HTMLButtonElement>('#filters .filter').forEach((tag) =
 	});
 });
 
+const no_results = document.getElementById('noresults') as HTMLElement;
+
 function filterBy(tag: string): void {
-	console.log(tag);
+	let results: number = 0;
+
+	document.querySelectorAll<HTMLElement>('#works .work').forEach((work) => {
+		const categories_str = work.dataset.categories;
+
+		if (categories_str === undefined) return;
+
+		const categories = categories_str.split(' ').filter((s) => s !== '');
+
+		if (categories.includes(tag)) {
+			work.style.display = 'block';
+			results ++;
+		} else {
+			work.style.display = 'none';
+		}
+	});
+
+	no_results.style.display = results === 0 ? 'block' : 'none';
+}
+
+function removeFilter(): void {
+	no_results.style.display = 'none';
+
+	document.querySelectorAll<HTMLElement>('#works .work').forEach((work) => {
+		work.style.display = 'block';
+	});
 }
