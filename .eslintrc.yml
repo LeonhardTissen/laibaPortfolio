@@ -1,0 +1,15 @@
+env:
+  browser: true
+extends:
+  - 'eslint-config-getkey'
+  - 'eslint:recommended'
+  - 'plugin:@typescript-eslint/recommended'
+parser: '@typescript-eslint/parser'
+plugins:
+  - '@typescript-eslint'
+globals:
+  require: readonly
+  process: readonly
+rules:
+  no-console: off
+  no-case-declarations: off
