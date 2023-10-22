@@ -3,10 +3,13 @@ nav {
 		font-size: 20px;
 		text-decoration: none;
 		padding-inline: 12px;
+		transition: all 0.2s ease-out;
+		display: inline-block;
 
 		&.selected {
 			font-weight: bold;
 			color: theme('colors.coffee');
+			padding-inline: 18px;
 		}
 	}
 }

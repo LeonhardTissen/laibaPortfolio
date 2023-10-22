@@ -1,5 +1,5 @@
 footer {
-	position: relative;
+	padding-top: 80px;
 	
 	.footersection {
 		min-height: 250px;
@@ -42,5 +42,14 @@ footer {
 		right: 15px;
 		bottom: 5px;
 		margin: 0;
+	}
+}
+@media screen and (max-width: 520px) {
+	footer {
+		flex-direction: column;
+
+		.footersection {
+			margin: auto;
+		}
 	}
 }

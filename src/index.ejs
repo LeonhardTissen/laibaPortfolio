@@ -18,36 +18,154 @@
 		<a href="#contact" class="link linkcontact">Contact</a>
 	</nav>
 
-	<div id="pages">
-		<div class="page selected" id="homepage">
+	<main id="pages">
+
+
+		<!-- HOMEPAGE -->
+		<article class="page selected" id="homepage">
 			<h1>Laiba Tariq</h1>
 			<p class="lorem"></p>
-		</div>
+		</article>
 
-		<div class="page" id="about">
-			<h1>About Me</h1>
-		</div>
 
-		<div class="page" id="portfolio">
+		<!-- ABOUT -->
+		<article class="page" id="about">
+			<h1>Laiba Tariq</h1>
+
+			<div class="flex justify-between gap-8">
+				<div id="aboutme">
+					<h2 class="loremshort"></h2>
+					<p class="lorem"></p>
+					<h2 class="loremshort"></h2>
+					<p class="lorem"></p>
+				</div>
+	
+				<div id="workedwith">
+					<h2>I've worked with</h2>
+					<a href="//google.com/">John Doe</a>
+					<a href="//google.com/">John Doe</a>
+					<a href="//google.com/">John Doe</a>
+				</div>
+			</div>
+		</article>
+
+
+		<!-- PORTFOLIO -->
+		<article class="page" id="portfolio">
 			<h1>My Portfolio</h1>
-		</div>
 
-		<div class="page" id="resume">
+
+			<div id="filters">
+				<h2>Filters:</h2>
+
+				<button class="filter" data-category="seo_writing">SEO Writing</button>
+				<button class="filter" data-category="blog_writing">Blog Writing</button>
+				<button class="filter" data-category="script_writing">Script Writing</button>
+				<button class="filter" data-category="editing">Editing</button>
+				<button class="filter" data-category="travel">Travel</button>
+				<button class="filter" data-category="pet">Pet</button>
+				<button class="filter" data-category="health">Health</button>
+				<button class="filter" data-category="wellness">Wellness</button>
+				<button class="filter" data-category="b2b">B2B</button>
+				<button class="filter" data-category="food">Food</button>
+				<button class="filter" data-category="lifestyle">Lifestyle</button>
+			</div>
+
+
+			<hr class="border-coffee my-16">
+
+
+			<div id="works" class="flex flex-wrap justify-center">
+				<!--
+					CATEGORIZE YOUR WORK
+					data-categories="seo_writing health wellness"
+	
+					LINK YOUR WORK
+					href="//google.com"
+				-->
+
+
+				<a class="work" data-categories="seo_writing" href="//google.com">
+					<h2>SEO Example</h2>
+					<div class="img-container">
+						<img src="<%= require('./assets/imgs/works/Sample_abc.jpg') %>">
+					</div>
+				</a>
+
+
+				<a class="work" data-categories="seo_writing blog_writing" href="//google.com">
+					<h2>SEO Blog Example</h2>
+					<div class="img-container">
+						<img src="<%= require('./assets/imgs/works/Sample_abc.jpg') %>">
+					</div>
+				</a>
+
+
+				<a class="work" data-categories="" href="//google.com">
+					<h2>Example</h2>
+					<div class="img-container">
+						<img src="<%= require('./assets/imgs/works/Sample_abc.jpg') %>">
+					</div>
+				</a>
+
+
+				<a class="work" data-categories="" href="//google.com">
+					<h2>Example</h2>
+					<div class="img-container">
+						<img src="<%= require('./assets/imgs/works/Sample_abc.jpg') %>">
+					</div>
+				</a>
+
+
+				<a class="work" data-categories="" href="//google.com">
+					<h2>Example</h2>
+					<div class="img-container">
+						<img src="<%= require('./assets/imgs/works/Sample_abc.jpg') %>">
+					</div>
+				</a>
+
+
+			</div>
+
+
+		</article>
+
+
+		<!-- RESUME -->
+		<article class="page" id="resume">
 			<h1>My Resume</h1>
-		</div>
+		</article>
 
-		<div class="page" id="contact">
+
+		<!-- CONTACT -->
+		<article class="page" id="contact">
 			<h1>Reach out to me</h1>
-		</div>
-	</div>
+
+			<form action="https://api.web3forms.com/submit" method="POST">
+				<input type="hidden" name="access_key" value="e886777b-7796-4d42-abcd-f8a853d410ae">
+				<input type="text" name="name" placeholder="Your Name" required>
+				<input type="email" name="email" placeholder="Your Email" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" required>
+				<textarea name="message" placeholder="Your Message" required></textarea>
+				<button type="submit">Submit</button>
+			</form>
+			
+		</article>
+
+
+	</main>
 
 	<footer class="border-t-2 border-coffee flex justify-evenly relative">
+
+
+		<!-- ABOUT -->
 		<div class="footersection">
 			<h1>About me</h1>
 
 			<p class="lorem"></p>
 		</div>
 
+
+		<!-- NAV MIRROR -->
 		<div class="footersection">
 			<h1>Check out</h1>
 
@@ -60,26 +178,32 @@
 			</div>
 		</div>
 
+
+		<!-- LINKS -->
 		<div class="footersection">
 			<h1>Reach out</h1>
 
 			<div id="footerlinks" class="flex justify-center gap-2">
 				<a href="https://www.upwork.com/freelancers/lyba">
-					<img src="<%= require('./assets/imgs/upworkm.svg') %>">
+					<img src="<%= require('./assets/imgs/logos/upworkm.svg') %>">
 				</a>
 				<a href="https://www.linkedin.com/in/lybataryk/">
-					<img src="<%= require('./assets/imgs/linkedinm.svg') %>">
+					<img src="<%= require('./assets/imgs/logos/linkedinm.svg') %>">
 				</a>
 				<a href="https://www.instagram.com/lyba_taryk/">
-					<img src="<%= require('./assets/imgs/instagramm.svg') %>">
+					<img src="<%= require('./assets/imgs/logos/instagramm.svg') %>">
 				</a>
 				<a href="mailto:laibatariq132@gmail.com">
-					<img src="<%= require('./assets/imgs/emailm.svg') %>">
+					<img src="<%= require('./assets/imgs/logos/emailm.svg') %>">
 				</a>
 			</div>
 		</div>
 
-		<p id="copyright">Laiba Tariq, All rights reserved &copy;2023</p>
+
+		<!-- COPYRIGHT -->
+		<p id="copyright">Laiba Tariq • All rights reserved &copy;2023</p>
+
+
 	</footer>
 	<%= htmlWebpackPlugin.tags.bodyTags %>
 </body>
