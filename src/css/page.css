@@ -1,0 +1,20 @@
+#pages {
+	.page {
+		display: none;
+		margin-inline: max(10px, calc(10vw - 30px));
+		min-height: 500px;
+
+		&.selected {
+			display: block;
+		}
+
+		h1 {
+			font-size: 72px;
+			font-family: Alegreya;
+		}
+		h2 {
+			font-size: 24px;
+			font-family: Alegreya;
+		}
+	}
+}

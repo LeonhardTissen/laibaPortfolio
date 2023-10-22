@@ -1,3 +1,22 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+:root {
+	--primary: #FFF6D7;
+	--primary-text: #033F48;
+	--secondary: #DDD3BF;
+	--secondary-text: #CBA374;
+}
+
+@font-face {
+	src: url(../assets/fonts/SourceSans3-Regular.ttf);
+	font-family: SourceSans3;
+}
+@font-face {
+	src: url(../assets/fonts/Alegreya-Regular.ttf);
+	font-family: Alegreya;
+}
+
+body {
+	background-color: var(--primary);
+	color: var(--primary-text);
+	font-family: SourceSans3;
+	margin: 0px;
+}

@@ -1,0 +1,15 @@
+footer {
+	display: flex;
+	border-top: 1px solid var(--secondary);
+	justify-content: space-evenly;
+	
+	.footersection {
+		min-height: 200px;
+		width: 400px;
+
+		h1 {
+			font-family: Alegreya;
+			text-align: center;
+		}
+	}
+}

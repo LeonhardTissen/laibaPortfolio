@@ -2,10 +2,43 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Example</title>
+	<title>Laiba Tariq - Portfolio</title>
 	<%= htmlWebpackPlugin.tags.headTags %>
 </head>
-<body class="bg-black">
+<body>
+	<nav>
+		<a href="#" class="selected">Home</a>
+		|
+		<a href="#about">About</a>
+		|
+		<a href="#portfolio">Portfolio</a>
+		|
+		<a href="#resume">Resume</a>
+		|
+		<a href="#contact">Contact</a>
+	</nav>
+
+	<div id="pages">
+		<div class="page selected" id="pagehome">
+			<h1>Laiba Tariq</h1>
+			<p class="lorem"></p>
+		</div>
+	</div>
+
+	<footer>
+		<div class="footersection">
+			<h1>About me</h1>
+			<p class="lorem"></p>
+		</div>
+
+		<div class="footersection">
+			<h1>Check out</h1>
+		</div>
+
+		<div class="footersection">
+			<h1>Reach out</h1>
+		</div>
+	</footer>
 	<%= htmlWebpackPlugin.tags.bodyTags %>
 </body>
 </html>

@@ -2,6 +2,7 @@
 	"plugins": {
 		"postcss-preset-env": {},
 		"cssnano": {},
+		"tailwindcss/nesting": {},
 		"tailwindcss": {}
 	}
 }
