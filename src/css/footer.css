@@ -2,14 +2,49 @@ footer {
 	display: flex;
 	border-top: 1px solid var(--secondary);
 	justify-content: space-evenly;
+	position: relative;
 	
 	.footersection {
-		min-height: 200px;
-		width: 400px;
+		min-height: 250px;
+		width: 300px;
 
 		h1 {
 			font-family: Alegreya;
 			text-align: center;
+		}
+		
+		#footernav {
+			a {
+				display: block;
+				text-decoration: underline;
+
+				&:before {
+					content: "• "
+				}
+
+				&.selected {
+					display: none;
+				}
+			}
+		}
+
+		#footerlinks {
+			text-align: center;
+
+			img {
+				width: 50px;
+			}
+		}
+	}
+
+	#copyright {
+		position: absolute;
+		right: 15px;
+		bottom: 5px;
+		margin: 0;
+
+		&:hover {
+			opacity: 0.1;
 		}
 	}
 }

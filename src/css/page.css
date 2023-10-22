@@ -1,8 +1,8 @@
 #pages {
 	.page {
 		display: none;
-		margin-inline: max(10px, calc(10vw - 30px));
-		min-height: 500px;
+		margin-inline: max(10px, calc(30vw - 150px));
+		min-height: calc(100vh - 300px);
 
 		&.selected {
 			display: block;
@@ -11,6 +11,8 @@
 		h1 {
 			font-size: 72px;
 			font-family: Alegreya;
+			margin: 0px;
+			padding-block: 42px;
 		}
 		h2 {
 			font-size: 24px;

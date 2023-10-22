@@ -7,7 +7,7 @@
 </head>
 <body>
 	<nav>
-		<a href="#" class="selected">Home</a>
+		<a href="#homepage" class="selected">Homepage</a>
 		|
 		<a href="#about">About</a>
 		|
@@ -19,7 +19,7 @@
 	</nav>
 
 	<div id="pages">
-		<div class="page selected" id="pagehome">
+		<div class="page selected" id="homepage">
 			<h1>Laiba Tariq</h1>
 			<p class="lorem"></p>
 		</div>
@@ -33,11 +33,36 @@
 
 		<div class="footersection">
 			<h1>Check out</h1>
+
+			<div id="footernav">
+				<a href="#homepage" class="selected">Homepage</a>
+				<a href="#about">About</a>
+				<a href="#portfolio">Portfolio</a>
+				<a href="#resume">Resume</a>
+				<a href="#contact">Contact</a>
+			</div>
 		</div>
 
 		<div class="footersection">
 			<h1>Reach out</h1>
+
+			<div id="footerlinks">
+				<a href="https://www.upwork.com/freelancers/lyba">
+					<img src="<%= require('./assets/imgs/upworkm.svg') %>">
+				</a>
+				<a href="https://www.linkedin.com/in/lybataryk/">
+					<img src="<%= require('./assets/imgs/linkedinm.svg') %>">
+				</a>
+				<a href="https://www.instagram.com/lyba_taryk/">
+					<img src="<%= require('./assets/imgs/instagramm.svg') %>">
+				</a>
+				<a href="mailto:laibatariq132@gmail.com">
+					<img src="<%= require('./assets/imgs/emailm.svg') %>">
+				</a>
+			</div>
 		</div>
+
+		<p id="copyright">Laiba Tariq, All rights reserved &copy;2023</p>
 	</footer>
 	<%= htmlWebpackPlugin.tags.bodyTags %>
 </body>
