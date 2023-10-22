@@ -3,11 +3,13 @@
 @import "tailwindcss/utilities";
 
 @font-face {
-	src: url(../assets/fonts/SourceSans3-Regular.ttf);
+	src: url(../assets/fonts/SourceSans3-Regular.woff2) format('woff2'),
+		 url(../assets/fonts/SourceSans3-Regular.ttf) format('truetype');
 	font-family: SourceSans3;
 }
 @font-face {
-	src: url(../assets/fonts/Alegreya-Regular.ttf);
+	src: url(../assets/fonts/Alegreya-Regular.woff2) format('woff2'),
+		 url(../assets/fonts/Alegreya-Regular.ttf) format('truetype');
 	font-family: Alegreya;
 }
 
