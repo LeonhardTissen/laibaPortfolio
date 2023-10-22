@@ -17,8 +17,14 @@ if (hash) {
 	setPage(hash.replace('#',''));
 }
 
+function capitalizeFirst(input: string): string {
+	return input.charAt(0).toUpperCase() + input.slice(1);
+}
+
 function setPage(page: string): void {
 	window.location.hash = page;
+
+	document.title = `Laiba Tariq - ${capitalizeFirst(page)}`;
 
 	// Hide all anchor tags that were previously selected
 	const non_selected_links = document.querySelectorAll<HTMLAnchorElement>('.link.selected');

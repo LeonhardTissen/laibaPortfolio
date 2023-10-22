@@ -78,8 +78,6 @@
 			}
 
 			#works {
-				padding-bottom: 100px;
-
 				.work {
 					flex: 0 0 30%;
 					border-radius: 16px;
