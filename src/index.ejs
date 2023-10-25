@@ -8,13 +8,9 @@
 <body class="bg-paper text-ink">
 	<nav class="border-b-2 border-coffee text-center pt-4 pb-4 select-none">
 		<a href="#homepage" class="link linkhomepage selected">Homepage</a>
-		|
 		<a href="#about" class="link linkabout">About</a>
-		|
 		<a href="#portfolio" class="link linkportfolio">Portfolio</a>
-		|
 		<a href="#resume" class="link linkresume">Resume</a>
-		|
 		<a href="#contact" class="link linkcontact">Contact</a>
 	</nav>
 
@@ -396,13 +392,21 @@
 		<article class="page" id="contact">
 			<h1>Reach out to me</h1>
 
-			<form action="https://api.web3forms.com/submit" method="POST">
-				<input type="hidden" name="access_key" value="e886777b-7796-4d42-abcd-f8a853d410ae">
-				<input type="text" name="name" placeholder="Your Name" required>
-				<input type="email" name="email" placeholder="Your Email" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" required>
-				<textarea name="message" placeholder="Your Message" required></textarea>
-				<button type="submit">Submit</button>
-			</form>
+			<div id="contactsides">
+				<div id="textside">
+					<h1>Asdasd</h1>
+					<p class="lorem"></p>
+				</div>
+				<div id="contactside">
+					<form action="https://api.web3forms.com/submit" method="POST">
+						<input type="hidden" name="access_key" value="e886777b-7796-4d42-abcd-f8a853d410ae">
+						<input type="text" name="name" placeholder="Your Name" required>
+						<input type="email" name="email" placeholder="Your Email" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" required>
+						<textarea name="message" placeholder="Your Message" required></textarea>
+						<button type="submit">Submit</button>
+					</form>
+				</div>
+			</div>
 			
 		</article>
 
