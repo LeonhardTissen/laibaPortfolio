@@ -6,7 +6,7 @@ module.exports = {
 		colors: {
 			transparent: 'transparent',
 			current: 'currentColor',
-			'paper': '#FFF6D7',
+			'paper': '#F2F0EA',
 			'ink': '#033F48',
 			'papyrus': '#DDD3BF',
 			'coffee': '#CBA374',
