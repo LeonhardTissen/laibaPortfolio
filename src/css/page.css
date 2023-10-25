@@ -22,9 +22,14 @@
 		}
 		li {
 			margin-block: 4px;
-			
+			list-style-position: outside;
+			position: relative;
+			margin-left: 16px;
+
 			&:before {
-				content: "• "
+				content: "• ";
+				position: absolute;
+				right: calc(100% + 8px);
 			}
 		}
 
