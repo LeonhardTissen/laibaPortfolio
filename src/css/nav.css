@@ -1,7 +1,7 @@
 nav {
 	a {
 		text-decoration: none;
-		padding-inline: 12px;
+		padding-inline: clamp(4px, 1.5vw, 20px);
 		transition: all 0.2s ease-out;
 		display: inline-block;
 

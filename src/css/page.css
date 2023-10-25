@@ -56,6 +56,17 @@
 					background-color: theme(colors.papyrus);
 				}
 			}
+			#contactsides {
+				display: flex;
+				justify-content: space-between;
+
+				#textside {
+					max-width: min(30vw, 400px);
+				}
+			}
+			#contactside {
+				width: 400px;
+			}
 		}
 
 		&#portfolio {
@@ -131,6 +142,21 @@
 			&#portfolio #works .work {
 				flex: 0 0 40%;
 				min-width: 160px;
+			}
+			&#contact {
+				#contactsides {
+					flex-direction: column;
+					text-align: center;
+
+					#contactside, #textside {
+						width: 100%;
+						max-width: 100%;
+
+						p {
+							text-align: left;
+						}
+					}
+				}
 			}
 		}
 	}
