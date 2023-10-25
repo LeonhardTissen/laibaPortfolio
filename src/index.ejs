@@ -401,16 +401,19 @@
 
 		<!-- CONTACT -->
 		<article class="page" id="contact">
-			<h1>Reach out to me</h1>
-
-			<form action="https://api.web3forms.com/submit" method="POST">
-				<input type="hidden" name="access_key" value="e886777b-7796-4d42-abcd-f8a853d410ae">
-				<input type="text" name="name" placeholder="Your Name" required>
-				<input type="email" name="email" placeholder="Your Email" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" required>
-				<textarea name="message" placeholder="Your Message" required></textarea>
-				<button type="submit">Submit</button>
-			</form>
-			
+			<div id="contacttext">
+				<h1>Reach out to me</h1>
+				<p>If you're interested in talking to me about my work, feel free to fill out this quick form and I'll get back to you ASAP!</p>
+			</div>
+			<div id="contactform">
+				<form action="https://api.web3forms.com/submit" method="POST">
+					<input type="hidden" name="access_key" value="e886777b-7796-4d42-abcd-f8a853d410ae">
+					<input type="text" name="name" placeholder="Your Name" required>
+					<input type="email" name="email" placeholder="Your Email" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" required>
+					<textarea name="message" placeholder="Your Message" required></textarea>
+					<button type="submit">Submit</button>
+				</form>
+			</div>
 		</article>
 
 
@@ -462,7 +465,7 @@
 
 
 		<!-- COPYRIGHT -->
-		<p id="copyright" class="absolute right-4 bottom-4 m-0">Laiba Tariq • All rights reserved &copy; 2023 - Developed by <a href="https://www.linkedin.com/in/leonhard-tissen/">Leonhard Tissen</a></p>
+		<p id="copyright" class="absolute right-4 bottom-4 m-0">Laiba Tariq • All rights reserved &copy; 2023 - Developed by <a class="underline" href="https://www.linkedin.com/in/leonhard-tissen/">Leonhard Tissen</a></p>
 
 
 	</footer>
