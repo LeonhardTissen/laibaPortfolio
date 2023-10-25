@@ -22,13 +22,25 @@
 		}
 		li {
 			margin-block: 4px;
-			
+			list-style-position: outside;
+			position: relative;
+			margin-left: 16px;
+
 			&:before {
-				content: "• "
+				content: "• ";
+				position: absolute;
+				right: calc(100% + 8px);
 			}
 		}
 
 		&#about {
+			#title {
+				padding-bottom: 0px;
+			}
+			#description {
+				padding-bottom: 80px;
+			}
+
 			#aboutme {
 				flex: 2.5;
 			}
