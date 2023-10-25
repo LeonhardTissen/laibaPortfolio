@@ -8,7 +8,7 @@ nav {
 		&.selected {
 			font-weight: bold;
 			color: theme('colors.coffee');
-			padding-inline: 18px;
+			padding-inline: clamp(6px, 2vw, 25px);
 		}
 	}
 }

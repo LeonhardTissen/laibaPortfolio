@@ -20,6 +20,13 @@
 			padding-block: 32px;
 			font-weight: bold;
 		}
+		li {
+			margin-block: 4px;
+			
+			&:before {
+				content: "• "
+			}
+		}
 
 		&#about {
 			#aboutme {
