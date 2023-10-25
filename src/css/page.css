@@ -68,7 +68,7 @@
 					top: 0;
 					left: 0;
 					background-image: url(../assets/imgs/holepunch.png);
-					background-size: 27.5px;
+					background-size: 10%;
 
 					&.back-1 {
 						top: 24px;
