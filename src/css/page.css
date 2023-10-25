@@ -2,7 +2,7 @@
 	.page {
 		display: none;
 		margin-inline: max(10px, calc(30vw - 150px));
-		min-height: calc(100vh - 100px);
+		padding-bottom: 20rem;
 
 		&.selected {
 			display: block;
@@ -86,13 +86,9 @@
 					border: 1px solid theme(colors.coffee);
 					min-width: 200px;
 					cursor: pointer;
-
-					h2 {
-						padding: 0px;
-						white-space: nowrap;
-						overflow: hidden;
-						text-overflow: ellipsis;
-					}
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
 
 					.img-container {
 						width: 100%;
@@ -107,9 +103,19 @@
 						}
 					}
 
-					p {
-						margin-top: 6px;
-						font-style: italic;
+					.work-text {
+						flex-grow: 1;
+						display: flex;
+						flex-direction: column;
+						justify-content: space-between;
+
+						h2 {
+							padding: 0;
+						}
+						p {
+							margin-top: 6px;
+							font-style: italic;
+						}
 					}
 				}
 			}
