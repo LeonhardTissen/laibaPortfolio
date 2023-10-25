@@ -12,7 +12,7 @@
 			font-size: 72px;
 			font-family: Alegreya;
 			margin: 0px;
-			padding-block: 42px;
+			padding-block: 120px;
 		}
 		h2 {
 			font-size: 24px;
@@ -62,10 +62,13 @@
 
 				#textside {
 					max-width: min(30vw, 400px);
+					h1 {
+						padding-block: 40px;
+					}
 				}
-			}
-			#contactside {
-				width: 400px;
+				#contactside {
+					width: 400px;
+				}
 			}
 		}
 
