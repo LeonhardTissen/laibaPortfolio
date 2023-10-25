@@ -35,8 +35,13 @@
 		}
 
 		&#homepage {
-			h1 {
-				padding-block: 280px;
+			#title {
+				padding-top: 280px;
+				padding-bottom: 0px;
+			}
+			#description {
+				font-size: 20px;
+				padding-bottom: 160px;
 			}
 			#photocontainer {
 				width: min(30vw, 400px);
@@ -199,7 +204,22 @@
 		}
 	}
 }
-
+@media screen and (max-width: 1600px) {
+	#pages {
+		.page {
+			&#homepage {
+				#description {
+					.title {
+						display: block;
+					}
+					.divider {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
 @media screen and (max-width: 720px) {
 	#pages {
 		.page {
