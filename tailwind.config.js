@@ -8,8 +8,8 @@ module.exports = {
 			current: 'currentColor',
 			'paper': '#F2F0EA',
 			'ink': '#033F48',
-			'papyrus': '#DDD3BF',
-			'coffee': '#FF5B00',
+			'papyrus': '#FF5B00',
+			'coffee': '#CBA374',
 		},
 	},
 };
