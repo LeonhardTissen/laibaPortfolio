@@ -9,7 +9,7 @@ module.exports = {
 			'paper': '#F2F0EA',
 			'ink': '#033F48',
 			'papyrus': '#DDD3BF',
-			'coffee': '#CBA374',
+			'coffee': '#FF5B00',
 		},
 	},
 };
