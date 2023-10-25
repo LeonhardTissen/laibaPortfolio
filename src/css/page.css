@@ -47,7 +47,8 @@
 				width: min(30vw, 400px);
 				height: min(30vw, 400px);
 				position: absolute;
-				top: 140px;
+				top: 360px;
+				transform: translateY(-50%);
 				right: 0px;
 
 				#photo {
@@ -256,6 +257,10 @@
 			}
 			h2 {
 				font-size: 20px;
+			}
+
+			#photocontainer {
+				display: none;
 			}
 		}
 	}
