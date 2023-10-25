@@ -109,9 +109,11 @@
 		}
 
 		&#contact {
-			display: flex;
-			justify-content: space-between;
-			margin-top: 140px;
+			#contactflex {
+				display: flex;
+				justify-content: space-between;
+				margin-top: 140px;
+			}
 
 			input, textarea, button {
 				background-color: transparent;
@@ -232,21 +234,6 @@
 				flex: 0 0 40%;
 				min-width: 160px;
 			}
-			&#contact {
-				#contactsides {
-					flex-direction: column;
-					text-align: center;
-
-					#contactside, #textside {
-						width: 100%;
-						max-width: 100%;
-
-						p {
-							text-align: left;
-						}
-					}
-				}
-			}
 		}
 	}
 }
@@ -270,14 +257,16 @@
 	#pages {
 		.page {
 			&#contact {
-				flex-direction: column;
-				
-				#contacttext, #contactform {
-					max-width: 100%;
-					width: 100%;
-				}
-				#contacttext {
-					margin-bottom: 140px;
+				#contactflex {
+					flex-direction: column;
+					
+					#contacttext, #contactform {
+						max-width: 100%;
+						width: 100%;
+					}
+					#contacttext {
+						margin-bottom: 140px;
+					}
 				}
 			}
 		}
