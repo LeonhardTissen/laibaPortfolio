@@ -1,8 +1,9 @@
 #pages {
 	.page {
 		display: none;
-		margin-inline: max(10px, calc(30vw - 150px));
+		margin-inline: max(20px, calc(30vw - 150px));
 		padding-bottom: 20rem;
+		position: relative;
 
 		&.selected {
 			display: block;
@@ -30,6 +31,50 @@
 				content: "• ";
 				position: absolute;
 				right: calc(100% + 8px);
+			}
+		}
+
+		&#homepage {
+			h1 {
+				padding-block: 280px;
+			}
+			#photocontainer {
+				width: min(30vw, 400px);
+				height: min(30vw, 400px);
+				position: absolute;
+				top: 140px;
+				right: 0px;
+
+				#photo {
+					border-radius: 50%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					z-index: 1;
+				}
+				.photoback {
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					border-radius: 50%;
+					top: 0;
+					left: 0;
+					background-image: url(../assets/imgs/holepunch.png);
+					background-size: 27.5px;
+
+					&.back-1 {
+						top: 24px;
+						left: 20px;
+						transform: rotateZ(45deg);
+					}
+					&.back-2 {
+						top: 12px;
+						left: -22px;
+						transform: rotateZ(-20deg);
+					}
+				}
 			}
 		}
 
