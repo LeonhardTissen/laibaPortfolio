@@ -3,6 +3,30 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Laiba Tariq - Home</title>
+
+	<!-- Standard tags -->
+	<meta name="title" content="Laiba Tariq - Content Writer">
+	<meta name="description" content="Laiba Tariq is a freelance SEO content writer and marketing manager for startups, B2B companies, and digital creators. This website is her digital portfolio.">
+	<meta name="keywords" content="content writer, SEO specialist, SEO writer, blog writer, freelance writer, freelancer content writer, marketing manager, content manager, digital marketer, article writer, Laiba Tariq">
+	<meta name="robots" content="index, follow">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="language" content="English">
+	<meta name="theme-color" content="#F2F0EA">
+
+	<!-- Open Graph (og) tags -->
+	<meta property="og:title" content="Laiba Tariq - Content Writer">
+	<meta property="og:description" content="Laiba Tariq is a freelance SEO content writer and marketing manager for startups, B2B companies, and digital creators. This website is her digital portfolio.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://laibatariq.netlify.app/">
+	<meta property="og:image" content="https://s.warze.org/laibatariqmeta.png">
+
+	<!-- Twitter tags -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:creator" content="@yourusername">
+	<meta name="twitter:title" content="Laiba Tariq - Content Writer">
+	<meta name="twitter:description" content="Laiba Tariq is a freelance SEO content writer and marketing manager for startups, B2B companies, and digital creators. This website is her digital portfolio.">
+	<meta name="twitter:image" content="https://s.warze.org/laibatariqmeta.png">
+
 	<meta name="google-site-verification" content="bcy5xsBntd1opKJle3srPlzq6wIgwtIsmzQOwGn3xiI" />
 	<%= htmlWebpackPlugin.tags.headTags %>
 </head>
@@ -402,18 +426,20 @@
 
 		<!-- CONTACT -->
 		<article class="page" id="contact">
-			<div id="contacttext">
-				<h1>Reach out to me</h1>
-				<p>If you're interested in talking to me about my work, feel free to fill out this quick form and I'll get back to you ASAP!</p>
-			</div>
-			<div id="contactform">
-				<form action="https://api.web3forms.com/submit" method="POST">
-					<input type="hidden" name="access_key" value="e886777b-7796-4d42-abcd-f8a853d410ae">
-					<input type="text" name="name" placeholder="Your Name" required>
-					<input type="email" name="email" placeholder="Your Email" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" required>
-					<textarea name="message" placeholder="Your Message" required></textarea>
-					<button type="submit">Submit</button>
-				</form>
+			<div id="contactflex">
+				<div id="contacttext">
+					<h1>Reach out to me</h1>
+					<p>If you're interested in talking to me about my work, feel free to fill out this quick form and I'll get back to you ASAP!</p>
+				</div>
+				<div id="contactform">
+					<form action="https://api.web3forms.com/submit" method="POST">
+						<input type="hidden" name="access_key" value="e886777b-7796-4d42-abcd-f8a853d410ae">
+						<input type="text" name="name" placeholder="Your Name" required>
+						<input type="email" name="email" placeholder="Your Email" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" required>
+						<textarea name="message" placeholder="Your Message" required></textarea>
+						<button type="submit">Submit</button>
+					</form>
+				</div>
 			</div>
 		</article>
 
