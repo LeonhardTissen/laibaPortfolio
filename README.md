@@ -16,3 +16,8 @@ yarn dev
 ```sh
 yarn build
 ```
+
+### Optimize images in works_src -> works
+```
+python3 optimize.py
+```
