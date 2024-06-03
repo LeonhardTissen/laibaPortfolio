@@ -14,7 +14,7 @@ class color:
 # Feel free to extend the categories
 
 categories = {
-	"writing": [
+	"worktype": [
 		{
 			"tag": "seo_writing",
 			"display": "SEO Writing"
@@ -28,7 +28,7 @@ categories = {
 			"display": "Blog Writing"
 		}
 	],
-	"marketing": [
+	"niches": [
 		{
 			"tag": "b2b",
 			"display": "B2B"
@@ -53,6 +53,14 @@ categories = {
 			"tag": "lifestyle",
 			"display": "Lifestyle"
 		},
+		{
+			"tag": "food",
+			"display": "Food"
+		},
+		{
+			"tag": "pets",
+			"display": "Pets"
+		}
 	],
 	"business": [
 		{
@@ -166,11 +174,10 @@ def get_image():
 	subdirectories = [f"/{subdirectory}/" for subdirectory in subdirectories if subdirectory != ""]
 	subdirectories.insert(0, "/")
 
-	subdirectory = choice_picker("Choose a subdirectory to put image in", subdirectories)
+	subdirectory = choice_picker("Choose a subdirectory to put image in (Default: /)", subdirectories)
 
 	if not subdirectory:
-		print(f"{color.red}No subdirectory chosen. Exiting...")
-		exit()
+		subdirectory = "/"
 	
 	os.system(f"cp {image_src_path} src/assets/imgs/works_src{subdirectory}")
 
@@ -226,8 +233,8 @@ print(f"{color.yellow}<< Starting >>")
 
 
 image = get_image()
-writing_categories = multiple_choice_picker("Choose writing category", categories["writing"])
-marketing_categories = multiple_choice_picker("Choose marketing category", categories["marketing"])
+worktype_categories = multiple_choice_picker("Choose work type", categories["worktype"])
+niche_categories = multiple_choice_picker("Choose niches", categories["niches"])
 business_categories = multiple_choice_picker("Choose business category", categories["business"])
 recruiter = choice_picker("Choose recruiter", categories["recruiters"])
 url = get_url()
@@ -235,7 +242,7 @@ title = get_title()
 
 tags = []
 display = []
-for category in [writing_categories, marketing_categories, business_categories]:
+for category in [worktype_categories, niche_categories, business_categories]:
 	for item in category:
 		if "display" in item:
 			display.append(item["display"])
