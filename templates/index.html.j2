@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Add Post</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+	<style>
+		body {
+			background-color: bisque;
+			background: linear-gradient(45deg, #d6d3c1CC, #fff2d0DD), url('https://source.unsplash.com/1600x900/?nature');
+			background-size: cover;
+			padding-bottom: 20px;
+		}
+
+		h1 {
+			text-align: center;
+			font: 3em sans-serif;
+		}
+
+		form {
+			width: 30%;
+			margin: 0 auto;
+			outline: 4px solid #0001;
+			border-radius: 18px;
+			padding: 10px;
+			backdrop-filter: blur(10px);
+			background-color: #fff2d077;
+		}
+
+		input[type='text'],
+		input[type='url'],
+		input[type='file'] {
+			display: block;
+			width: 100%;
+			border: none;
+			font-size: 1.5em;
+			padding: 0;
+		}
+
+		hr {
+			margin: 10px auto;
+		}
+
+		label {
+			font: 2em sans-serif;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Add Post</h1>
+	<form action='/add_post' method='post' enctype='multipart/form-data'>
+		<label for='title'>Title</label>
+		<input type='text' name='title' id='title' required placeholder="Enter the title of the post">
+
+		<hr>
+
+		<label for='url'>Post URL</label>
+		<input type='url' name='url' id='url' required placeholder="Enter the URL of the post">
+
+		<hr>
+
+		<label for='image'>Image</label>
+		<input type='file' name='image' id='image' required accept='image/png, image/jpeg, image/jpg, image/webp'>
+
+		<hr>
+
+		<label for='location'>Image Location</label>
+		{% for subdirectory in subdirectories %}
+		<br>
+		<input type='radio' name='location' value='{{ subdirectory }}' required> {{ subdirectory }}
+		{% endfor %}
+
+		<hr>
+
+		<label for='worktype'>Worktype</label>
+		{% for wt in worktype %}
+		<br>
+		<input type='radio' name='worktype' value='{{ wt.tag }}' required> {{ wt.display }}
+		{% endfor %}
+
+		<hr>
+
+		<label for='niches'>Niches</label>
+		{% for niche in niches %}
+		<br>
+		<input type='checkbox' name='niches' value='{{ niche.tag }}'> {{ niche.display }}
+		{% endfor %}
+
+		<hr>
+
+		<label for='business'>Business</label>
+		{% for bs in business %}
+		<br>
+		<input type='checkbox' name='business' value='{{ bs.tag }}'> {{ bs.display }}
+		{% endfor %}
+
+		<hr>
+
+		<label for='recruiter'>Recruiter</label>
+		{% for recruiter in recruiters %}
+		<br>
+		<input type='radio' name='recruiter' value='{{ recruiter.tag }}' required> {{ recruiter.display }}
+		{% endfor %}
+
+		<hr>
+
+		<button type='submit'>Add Post</button>
+	</form>
+</body>
+
+</html>
