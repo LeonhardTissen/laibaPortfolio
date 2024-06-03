@@ -32,7 +32,6 @@ def resize_images(input_dir, output_dir):
                     output_path = os.path.join(output_subdir, filename.split('.')[0] + '.jpg')
 
                     if os.path.exists(output_path):
-                        print(f"{color.info}{filename} already exists in the output directory. Skipping...")
                         continue
 
                     with Image.open(input_path) as img:
