@@ -1,6 +1,13 @@
 from PIL import Image
 import os
 
+valid_extensions = [".jpg", ".jpeg", ".png"]
+
+class color:
+    error: str = "\033[91m"
+    success: str = "\033[92m"
+    info: str = "\033[93m"
+
 def resize_images(input_dir, output_dir):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
@@ -18,10 +25,15 @@ def resize_images(input_dir, output_dir):
 
         # Process each file in the current directory
         for filename in files:
-            if filename.endswith(".jpg") or filename.endswith(".jpeg") or filename.endswith(".png"):
+            extension = os.path.splitext(filename)[1].lower()
+            if extension in valid_extensions:
                 try:
                     input_path = os.path.join(root, filename)
                     output_path = os.path.join(output_subdir, filename.split('.')[0] + '.jpg')
+
+                    if os.path.exists(output_path):
+                        print(f"{color.info}{filename} already exists in the output directory. Skipping...")
+                        continue
 
                     with Image.open(input_path) as img:
                         if img.mode != "RGB":
@@ -29,9 +41,9 @@ def resize_images(input_dir, output_dir):
                         img.thumbnail((500, 400))
                         img.save(output_path, "JPEG", quality=80)
 
-                    print(f"{filename} resized and saved successfully.")
+                    print(f"{color.success}{filename} resized and saved successfully.")
                 except Exception as e:
-                    print(f"Error processing {filename}: {e}")
+                    print(f"{color.error}Error processing {filename}: {e}")
 
 # Example usage:
 input_directory = "src/assets/imgs/works_src"
