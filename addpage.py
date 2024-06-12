@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 import os
 import random
 import string
+import time
 
 def random_string(length):
 	return ''.join(random.choices(string.ascii_uppercase + string.digits, k=length))
@@ -165,7 +166,9 @@ def add_post():
 		if "youtube.com/watch?v=" in url or "youtu.be/" in url:
 			random_id = random_string(5)
 			os.system(f"yt-dlp --write-thumbnail --skip-download -o {full_location}{random_id} {url}")
-			os.system(f"ffmpeg -i {full_location}/{random_id}.webp {full_location}{random_id}.png")
+			time.sleep(0.5)
+			os.system(f"ffmpeg -i {full_location}{random_id}.webp {full_location}{random_id}.png")
+			time.sleep(0.5)
 			os.remove(f"{full_location}{random_id}.webp")
 			filename = f"{random_id}.png"
 		else:
