@@ -166,10 +166,7 @@ def add_post():
 		if "youtube.com/watch?v=" in url or "youtu.be/" in url:
 			random_id = random_string(5)
 			os.system(f"yt-dlp --write-thumbnail --skip-download -o {full_location}{random_id} {url}")
-			time.sleep(0.5)
 			os.system(f"ffmpeg -i {full_location}{random_id}.webp {full_location}{random_id}.png")
-			time.sleep(0.5)
-			os.remove(f"{full_location}{random_id}.webp")
 			filename = f"{random_id}.png"
 		else:
 			return "Please upload an image."
