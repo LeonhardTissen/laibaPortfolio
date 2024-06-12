@@ -111,6 +111,10 @@ categories = {
 			"display": "Habitat Hub",
 			"tag": "habitat_hub"
 		},
+		{
+			"display": "Places with Wow",
+			"tag": "palces_with_wow"
+		},
 	]
 }
 
