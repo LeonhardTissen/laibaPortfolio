@@ -2,7 +2,6 @@ from flask import Flask, render_template, request
 import os
 import random
 import string
-import time
 
 def random_string(length):
 	return ''.join(random.choices(string.ascii_uppercase + string.digits, k=length))
@@ -164,10 +163,15 @@ def add_post():
 	image = request.files["image"]
 	if not image:
 		if "youtube.com/watch?v=" in url or "youtu.be/" in url:
-			random_id = random_string(5)
-			os.system(f"yt-dlp --write-thumbnail --skip-download -o {full_location}{random_id} {url}")
-			os.system(f"ffmpeg -i {full_location}{random_id}.webp {full_location}{random_id}.png")
-			filename = f"{random_id}.png"
+			# Remove timestamp from url
+			url = url.split("&")[0] if "&" in url else url
+			# Get video id
+			video_id = url.split("watch?v=")[1] if "watch?v=" in url else url.split("youtu.be/")[1]
+			# Get thumbnail
+			thumb_url = f"https://img.youtube.com/vi/{video_id}/maxresdefault.jpg"
+			# Save thumbnail
+			os.system(f"wget {thumb_url} -O {full_location}/{video_id}.jpg")
+			filename = f"{video_id}.jpg"
 		else:
 			return "Please upload an image."
 	else:
