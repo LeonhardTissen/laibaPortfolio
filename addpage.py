@@ -1,5 +1,10 @@
 from flask import Flask, render_template, request
 import os
+import random
+import string
+
+def random_string(length):
+	return ''.join(random.choices(string.ascii_uppercase + string.digits, k=length))
 
 app = Flask(__name__)
 
@@ -136,6 +141,8 @@ def add_post():
 	# Add post to database
 	formdata = request.form
 	niches = formdata.getlist("niches")
+	if not niches:
+		return "Please select at least one niche."
 	niches_display = [category["display"] for category in categories["niches"] if category["tag"] in niches]
 	business = formdata.getlist("business")
 	business_display = [category["display"] for category in categories["business"] if category["tag"] in business]
@@ -144,17 +151,36 @@ def add_post():
 	worktype = formdata.get("worktype")
 	worktype_display = [category["display"] for category in categories["worktype"] if category["tag"] == worktype][0]
 	location = formdata.get("location")
+
+	# URL
+	url = formdata.get("url")
+	if not url:
+		return "Please enter a URL."
+	
 	# Save image there
 	full_location = 'src/assets/imgs/works_src' + location
 	os.makedirs(full_location, exist_ok=True)
 	image = request.files["image"]
-	image.save(os.path.join(full_location, image.filename))
+	if not image:
+		if "youtube.com/watch?v=" in url or "youtu.be/" in url:
+			random_id = random_string(5)
+			os.system(f"yt-dlp --write-thumbnail --skip-download -o {full_location}{random_id} {url}")
+			os.system(f"ffmpeg -i {full_location}/{random_id}.webp {full_location}{random_id}.png")
+			os.remove(f"{full_location}{random_id}.webp")
+			filename = f"{random_id}.png"
+		else:
+			return "Please upload an image."
+	else:
+		image.save(os.path.join(full_location, filename))
+		original_filename = image.filename.split('.')[0]
+		original_extension = image.filename.split('.')[1]
+		filename = original_filename + random_string(5) + original_extension
 	os.system(f"python optimize.py")
-	absolute_image_path = f"./assets/imgs/works{location}{image.filename.split('.')[0]}.jpg"
-
+	absolute_image_path = f"./assets/imgs/works{location}{filename.split('.')[0]}.jpg"
 
 	title = formdata.get("title")
-	url = formdata.get("url")
+	if not title:
+		return "Please enter a title."
 
 	tags = niches + business + [recruiter, worktype]
 	display = niches_display + business_display + [recruiter_display, worktype_display]
