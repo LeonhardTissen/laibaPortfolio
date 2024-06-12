@@ -32,6 +32,14 @@ categories = {
 			"display": "Travel"
 		},
 		{
+			"tag": "fitness",
+			"display": "fitness"
+		},
+		{
+			"tag": "animal",
+			"display": "Animal"
+		},
+		{
 			"tag": "health",
 			"display": "Health"
 		},
@@ -90,6 +98,18 @@ categories = {
 		{
 			"display": "Premier Dental",
 			"tag": "premier_dental"
+		},
+		{
+			"display": "Apphud",
+			"tag": "apphud"
+		},
+		{
+			"display": "Legacy Building Mamas",
+			"tag": "legacy_building_mamas"
+		},
+		{
+			"display": "Habitat Hub",
+			"tag": "habitat_hub"
 		},
 	]
 }
